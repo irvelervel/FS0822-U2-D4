@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform</title>
+    <style>
+      h3 {
+        margin-top: 100px;
+      }
+
+      body > div {
+        width: 150px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div.rotate {
+        background-color: orange;
+        transform: rotate(120deg);
+      }
+
+      div.skew {
+        background-color: lightgreen;
+        transform: (22deg);
+      }
+
+      div.scale {
+        background-color: lightblue;
+      }
+
+      div.scale:hover {
+        transform: scale(1.4, 0.8);
+      }
+
+      div.translate {
+        transform: translate(80px, 20px);
+        background-color: pink;
+      }
+
+      div.everything {
+        background-color: purple;
+      }
+
+      div.everything:hover {
+        transform: scale(1.5) skew(10deg, 10deg) rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS TRANSFORMS</h1>
+    <h3>ROTATE</h3>
+    <div class="rotate">
+      <div>ROTATE BOX</div>
+    </div>
+    <h3>SKEW</h3>
+    <div class="skew">
+      <div>SKEW BOX</div>
+    </div>
+    <h3>SCALE</h3>
+    <div class="scale">
+      <div>SCALE BOX</div>
+    </div>
+    <h3>TRANSLATE</h3>
+    <div class="translate">
+      <div>TRANSLATE BOX</div>
+    </div>
+    <h3>ROTATE+SCALE+TRANSLATE</h3>
+    <div class="everything">
+      <div>SPECIAL BOX</div>
+    </div>
+  </body>
+</html>

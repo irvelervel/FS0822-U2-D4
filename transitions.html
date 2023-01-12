@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transitions</title>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      div {
+        width: 150px;
+        height: 150px;
+      }
+
+      .box-1 {
+        background-color: green;
+        transition: width 0.5s ease;
+      }
+
+      .box-1:hover {
+        width: 300px;
+      }
+
+      .box-2 {
+        background-color: blue;
+        /* transition: transform 2s; */
+        /* transition: transform 0.5s ease, width 1s linear; */
+        /* transition: proprietà durata curva_accelerazione delay */
+        transition: width 0.5s ease, transform 0.5s ease, background-color 2s;
+      }
+
+      .box-2:hover {
+        /* transform: rotate(45deg) scale(1.3); */
+        width: 300px;
+        transform: rotate(45deg);
+        background-color: yellow;
+      }
+
+      .box-3 {
+        background-color: red;
+        transition: width 5s;
+        /* questa è una transizione che funziona sia per IN che per OUT */
+      }
+
+      .box-3:hover {
+        width: 500px;
+        transition: width 1s;
+        /* sto impostando un listener sulla width dell'elemento a partire
+        dall'hover */
+        /* ATTENZIONE, FUNZIONA AL CONTRARIO! la transizione sull'hover ora
+        diventa quella in IN, e la transizione sull'elemento ora è quella in OUT */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TRANSIZIONI CSS</h1>
+    <h2>BOX CHE SI ALLUNGA ALL'HOVER</h2>
+    <div class="box-1"></div>
+    <h2>BOX CHE SI ALLUNGA, RUOTA E CAMBIA COLORE ALL'HOVER</h2>
+    <div class="box-2"></div>
+    <h2>BOX CHE SI ALLUNGA CON VELOCITÀ DIVERSE PER IN E OUT</h2>
+    <div class="box-3"></div>
+  </body>
+</html>

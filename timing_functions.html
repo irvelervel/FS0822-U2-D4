@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timing Functions</title>
+    <style>
+      body > div {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: width 2s;
+        /* in questo modo la timing-function è ease, il valore di default, e
+        il delay è di 0 secondi */
+      }
+
+      body > div:hover {
+        width: 500px;
+      }
+
+      #div1 {
+        transition-timing-function: ease;
+      }
+      #div2 {
+        transition-timing-function: linear;
+      }
+      #div3 {
+        transition-timing-function: ease-in;
+      }
+      #div4 {
+        transition-timing-function: ease-out;
+      }
+      #div5 {
+        transition-timing-function: ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TIMING FUNCTIONS</h1>
+    <p>Diamo un'occhiata alle diverse curve di velocità possibili</p>
+    <div id="div1">EASE</div>
+    <div id="div2">LINEAR</div>
+    <div id="div3">EASE-IN</div>
+    <div id="div4">EASE-OUT</div>
+    <div id="div5">EASE-IN-OUT</div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards example</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cards {
+        display: flex;
+      }
+
+      .cards article {
+        width: 200px;
+        padding: 0px 20px 40px;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: rgb(82, 82, 82);
+        color: white;
+      }
+
+      #card-1 {
+        transform: rotate(-10deg) translate(10px, 30px);
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+        /* questo descrive il comportamento della transizione in USCITA */
+        /* significa che transform, background-color, color e z-index cambiano
+        tutte in 0.3s */
+      }
+
+      #card-2 {
+        z-index: 2;
+        transition: all 0.3s ease-in-out;
+      }
+
+      #card-3 {
+        transform: rotate(10deg) translate(-10px, 30px);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+      }
+
+      #card-1:hover {
+        transform: scale(1.3) rotate(-10deg) translate(10px, 30px);
+        z-index: 3;
+        background-color: orange;
+        color: black;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+        /* questo descrive il comportamento della transizione in ENTRATA */
+        /* abbiamo escluso lo z-index dalla transizione in modo che il suo
+        cambiamento risulti istantaneo */
+      }
+
+      #card-2:hover {
+        transform: scale(1.3);
+        z-index: 4;
+        background-color: orange;
+        color: black;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+      }
+
+      #card-3:hover {
+        transform: scale(1.3) rotate(10deg) translate(-10px, 30px);
+        background-color: orange;
+        color: black;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+      }
+
+      .text-box {
+        width: 200px;
+        height: 50px;
+        border: 1px solid gray;
+        margin-top: -100px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text-box h2 {
+        margin: 0;
+        animation: pacman 10s ease infinite;
+      }
+
+      @keyframes pacman {
+        0% {
+          transform: translate(-610px);
+        }
+
+        40% {
+          transform: translate(0px);
+        }
+
+        60% {
+          transform: translate(0px);
+        }
+
+        100% {
+          transform: translate(610px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="text-box">
+        <h2>ESEMPIO FINALE</h2>
+      </div>
+      <div class="cards">
+        <article id="card-1">
+          <h2>Card 1</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            deleniti, aspernatur esse non minus minima voluptatem, facere
+            ratione amet nemo nulla dolorum hic voluptas laudantium fugiat
+            nihil, repudiandae aliquid voluptates. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Iusto deleniti, aspernatur esse non
+            minus minima voluptatem, facere ratione amet nemo nulla dolorum hic
+            voluptas laudantium fugiat nihil, repudiandae aliquid voluptates.
+          </p>
+        </article>
+        <article id="card-2">
+          <h2>Card 2</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            deleniti, aspernatur esse non minus minima voluptatem, facere
+            ratione amet nemo nulla dolorum hic voluptas laudantium fugiat
+            nihil, repudiandae aliquid voluptates. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Iusto deleniti, aspernatur esse non
+            minus minima voluptatem, facere ratione amet nemo nulla dolorum hic
+            voluptas laudantium fugiat nihil, repudiandae aliquid voluptates.
+          </p>
+        </article>
+        <article id="card-3">
+          <h2>Card 3</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            deleniti, aspernatur esse non minus minima voluptatem, facere
+            ratione amet nemo nulla dolorum hic voluptas laudantium fugiat
+            nihil, repudiandae aliquid voluptates. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Iusto deleniti, aspernatur esse non
+            minus minima voluptatem, facere ratione amet nemo nulla dolorum hic
+            voluptas laudantium fugiat nihil, repudiandae aliquid voluptates.
+          </p>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

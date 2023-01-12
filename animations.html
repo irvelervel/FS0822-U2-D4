@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: myAnimation 4s linear infinite;
+        /* nome, durata, timing-function, delay, iteration-count */
+      }
+
+      .box div {
+        animation: textAnimation 4s linear 1s infinite;
+      }
+
+      .rectangle {
+        width: 300px;
+        height: 50px;
+        background-color: lightgray;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-top: 100px;
+      }
+
+      .rectangle h3 {
+        animation: textAnimation2 5s infinite;
+      }
+
+      @keyframes myAnimation {
+        /* vuol dire 0%*/
+        /* from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(45deg);
+          background-color: yellow;
+        } */
+        /* vuol dire 100%*/
+
+        0% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(45deg);
+          background-color: yellow;
+        }
+
+        100% {
+          transform: rotate(0deg);
+          background-color: green;
+        }
+      }
+
+      @keyframes textAnimation {
+        0% {
+          color: white;
+        }
+
+        50% {
+          color: black;
+        }
+
+        100% {
+          color: white;
+        }
+      }
+
+      @keyframes textAnimation2 {
+        50% {
+          transform: translate(100%);
+        }
+        100% {
+          transform: translate(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ANIMAZIONI CSS</h1>
+    <div class="box">
+      <div>I'M A BOX</div>
+    </div>
+    <div class="rectangle">
+      <h3 class="rectangle-text">LOREM IPSUM</h3>
+    </div>
+  </body>
+</html>
